@@ -1,0 +1,70 @@
+{
+  "name": "rpg.ai",
+  "homepage": "https://etherealmachine.github.io/rpg-ai",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.12",
+    "@popperjs/core": "^2.5.4",
+    "@sentry/react": "^5.28.0",
+    "@sentry/tracing": "^5.28.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/classnames": "^2.2.9",
+    "@types/dompurify": "^2.0.4",
+    "@types/geojson": "^7946.0.7",
+    "@types/jest": "^24.0.0",
+    "@types/marked": "^1.1.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-beautiful-dnd": "^13.0.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/seedrandom": "^2.4.28",
+    "astroturf": "^0.10.5",
+    "classnames": "^2.2.6",
+    "customize-cra": "^1.0.0",
+    "dompurify": "^2.2.2",
+    "immer": "^6.0.5",
+    "marked": "^1.2.3",
+    "polybooljs": "^1.2.0",
+    "react": "^16.12.0",
+    "react-app-rewired": "^2.1.6",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.0",
+    "seedrandom": "^3.0.5",
+    "typescript": "~3.7.2",
+    "web-vitals": "^0.2.4"
+  },
+  "devDependencies": {
+    "heroku": "^7.38.2"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build && rm -rf docs && mv build docs",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
