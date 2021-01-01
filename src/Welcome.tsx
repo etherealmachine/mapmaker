@@ -36,7 +36,7 @@ export default function Welcome() {
     </ul>
     <h3>Support</h3>
     <ul>
-      <li>File bugs at <a href="https://github.com/etherealmachine/rpg-ai/issues">Github Issues</a></li>
+      <li>File bugs at <a href="https://github.com/etherealmachine/mapmaker/issues">Github Issues</a></li>
       <li>If you like the project, or want more features, support development on <a href="https://www.patreon.com/etherealmachine">Patreon</a></li>
     </ul>
     <p className={classes.footer}>Developed by <a href="https://github.com/etherealmachine">@etherealmachine</a>, Copyright 2020</p>

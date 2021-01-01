@@ -1,6 +1,6 @@
 {
   "name": "rpg.ai",
-  "homepage": "https://etherealmachine.github.io/rpg-ai",
+  "homepage": "https://etherealmachine.github.io/mapmaker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
