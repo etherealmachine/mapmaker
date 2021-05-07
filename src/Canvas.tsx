@@ -84,6 +84,8 @@ export class CanvasRenderer {
     this.bufferCtx = bufferCtx;
     this.mode = mode;
     this.level = level;
+
+    this.loadTextures(['Rectangular Tiles A.jpg']);
   }
 
   attachListeners() {
@@ -111,16 +113,16 @@ export class CanvasRenderer {
 
   loadTextures(filenames: string[]) {
     const buf = document.createElement('canvas');
-    buf.width = 1024;
-    buf.height = 1024;
+    buf.width = 600;
+    buf.height = 600;
     const bufCtx = buf.getContext('2d', { alpha: true });
     if (bufCtx === null) {
       throw new Error('unable to create pattern');
     }
     filenames.forEach(filename => {
       const img = document.createElement('img');
-      img.width = 100;
-      img.height = 100;
+      img.width = 600;
+      img.height = 600;
       img.onload = () => {
         bufCtx.drawImage(img, 0, 0);
         const pattern = this.ctx.createPattern(buf, 'repeat');
@@ -432,7 +434,8 @@ export class CanvasRenderer {
     const { ctx } = this;
     this.pathPoints(points, true);
     if (fill) {
-      ctx.fillStyle = fill;
+      ctx.fillStyle = this.textures['Rectangular Tiles A.jpg'];
+      // ctx.fillStyle = fill;
       ctx.fill();
     }
     if (stroke) {
