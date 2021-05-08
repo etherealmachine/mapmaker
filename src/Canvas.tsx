@@ -85,7 +85,7 @@ export class CanvasRenderer {
     this.mode = mode;
     this.level = level;
 
-    this.loadTextures(['Rectangular Tiles A.jpg']);
+    this.loadTextures(['Rectangular Tiles A.jpg', 'Grass Dark Rocky.jpg']);
   }
 
   attachListeners() {
@@ -492,7 +492,8 @@ export class CanvasRenderer {
     const { ctx } = this;
     this.pathPoints(points);
     if (fill) {
-      ctx.strokeStyle = fill;
+      ctx.strokeStyle = this.textures['Grass Dark Rocky.jpg'];
+      // ctx.strokeStyle = fill;
       ctx.lineJoin = 'round';
       ctx.lineCap = 'round';
       ctx.lineWidth = 0.9;
@@ -500,6 +501,7 @@ export class CanvasRenderer {
     }
     this.ctx.globalCompositeOperation = 'destination-over';
     if (stroke) {
+      // ctx.strokeStyle = this.textures['Grass Dark Rocky.jpg'];
       ctx.strokeStyle = stroke;
       ctx.lineJoin = 'round';
       ctx.lineCap = 'round';
