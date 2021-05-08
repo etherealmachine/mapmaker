@@ -551,14 +551,17 @@ export class CanvasRenderer {
     const [from, to] = points;
     if (stroke) {
       const l = Math.max(Math.abs(from[0] - to[0]), Math.abs(from[1] - to[1]));
+      const [x, y] = [to[0] - from[0], to[1] - from[1]];
       ctx.font = `${l}px Helvetica`;
-      const m = this.ctx.measureText('S');
-      let h = m.actualBoundingBoxAscent + m.actualBoundingBoxDescent;
-      let w = m.actualBoundingBoxLeft - m.actualBoundingBoxRight;
-      const [cx, cy] = [w / 2, h / 2];
+      const theta = Math.atan(x / y);
+      const [ox, oy] = [from[0] + x / 2, from[1] + y / 2];
       ctx.save();
       ctx.fillStyle = stroke;
-      ctx.fillText('S', from[0] + (to[0] - from[0]) / 2 + cx, from[1] + (to[1] - from[1]) / 2 + cy);
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.translate(ox, oy);
+      ctx.rotate(theta);
+      ctx.fillText('S', 0, 0);
       ctx.restore();
     }
   }
